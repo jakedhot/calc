@@ -1,0 +1,95 @@
+/* src/App.css */
+
+/* Default Dark Theme */
+:root {
+  --bg-color: #121212;
+  --calculator-bg: #1e1e1e;
+  --input-bg: #1e1e1e;
+  --input-color: white;
+  --button-bg: #333; /* Dark grey */
+  --button-color: white;
+  --number-bg: #d3d3d3; /* Light grey for numbers */
+  --operator-bg: #007BFF; /* Blue for operators */
+  --operator-color: white;
+  --button-hover-bg: #444; /* Slightly lighter grey */
+  --operator-hover-bg: #0056b3; /* Darker blue */
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: var(--input-color);
+}
+
+.calculator {
+  background-color: var(--calculator-bg);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  text-align: right;
+  font-size: 24px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding-right: 10px;
+  background-color: var(--input-bg);
+  color: var(--input-color);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px; /* Space between buttons */
+}
+
+button {
+  height: 60px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Styles for number buttons */
+button.number {
+  background-color: var(--number-bg); /* Light grey */
+  color: black;
+}
+
+button.number:hover {
+  background-color: #c0c0c0; /* Darker grey on hover */
+}
+
+/* Styles for operator buttons */
+button.operator {
+  background-color: var(--operator-bg);
+  color: var(--operator-color);
+}
+
+button.operator:hover {
+  background-color: var(--operator-hover-bg);
+}
